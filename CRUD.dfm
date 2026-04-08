@@ -192,7 +192,7 @@ object FCrud: TFCrud
       OnClick = sbCancelClick
       ExplicitLeft = 737
     end
-    object SpeedButton1: TSpeedButton
+    object sbRelatorio: TSpeedButton
       Left = 301
       Top = 10
       Width = 89
@@ -204,7 +204,7 @@ object FCrud: TFCrud
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
-      OnClick = SpeedButton1Click
+      OnClick = sbRelatorioClick
     end
   end
   object pgCRUD: TPageControl
@@ -224,10 +224,6 @@ object FCrud: TFCrud
     object tsCadastro: TTabSheet
       Caption = 'Cadastro'
       ImageIndex = 1
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
     end
     object tsDados: TTabSheet
       Caption = 'Dados'

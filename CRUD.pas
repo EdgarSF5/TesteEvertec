@@ -33,7 +33,7 @@ type
     edFiltro: TEdit;
     lblLb1: TLabel;
     pnRegistros: TPanel;
-    SpeedButton1: TSpeedButton;
+    sbRelatorio: TSpeedButton;
     ppRelSimplificado: TppReport;
     ppDbDadosRel: TppDBPipeline;
     dsDadosRel: TDataSource;
@@ -51,7 +51,7 @@ type
     procedure dsDadosDataChange(Sender: TObject; Field: TField);
     procedure FormShow(Sender: TObject);
     procedure cbFiltroChange(Sender: TObject);
-    procedure SpeedButton1Click(Sender: TObject);
+    procedure sbRelatorioClick(Sender: TObject);
     procedure gridDadosDblClick(Sender: TObject);
   private
     { Private declarations }
@@ -114,11 +114,12 @@ end;
 
 procedure TFCrud.dsDadosStateChange(Sender: TObject);
 begin
-  sbInsert.Enabled := (dsDados.State = dsBrowse);
-  sbEdit.Enabled   := (dsDados.State = dsBrowse) and (dsDados.DataSet.RecordCount > 0);
-  sbDelete.Enabled := (dsDados.State = dsBrowse) and (dsDados.DataSet.RecordCount > 0);
-  sbPost.Enabled   := dsDados.State in [dsEdit, dsInsert];
-  sbCancel.Enabled := dsDados.State in [dsEdit, dsInsert];
+  sbInsert.Enabled    := (dsDados.State = dsBrowse);
+  sbRelatorio.Enabled := (dsDados.State = dsBrowse);
+  sbEdit.Enabled      := (dsDados.State = dsBrowse) and (dsDados.DataSet.RecordCount > 0);
+  sbDelete.Enabled    := (dsDados.State = dsBrowse) and (dsDados.DataSet.RecordCount > 0);
+  sbPost.Enabled      := dsDados.State in [dsEdit, dsInsert];
+  sbCancel.Enabled    := dsDados.State in [dsEdit, dsInsert];
 
   sbFirst.Enabled := (dsDados.State = dsBrowse) and (dsDados.DataSet.RecordCount > 0);
   sbPrior.Enabled := (dsDados.State = dsBrowse) and (dsDados.DataSet.RecordCount > 0);
@@ -255,7 +256,7 @@ begin
   dsDados.DataSet.Prior;
 end;
 
-procedure TFCrud.SpeedButton1Click(Sender: TObject);
+procedure TFCrud.sbRelatorioClick(Sender: TObject);
 begin
   dsDadosRel.DataSet.Close;
   dsDadosRel.DataSet.Open;
