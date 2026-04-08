@@ -10,7 +10,6 @@ inherited FCliente: TFCliente
     end
   end
   inherited pgCRUD: TPageControl
-    ActivePage = tsCadastro
     inherited tsCadastro: TTabSheet
       object Label2: TLabel
         Left = 45
@@ -260,14 +259,14 @@ inherited FCliente: TFCliente
     AutoStop = False
     DataPipeline = ppDbDadosRel
     DataPipelineName = 'ppDbDadosRel'
-    object ppTitleBand1: TppTitleBand
+    object ppTitleBand1: TppTitleBand [0]
       Background.Brush.Style = bsClear
       Border.mmPadding = 0
       mmBottomOffset = 0
       mmHeight = 12435
       mmPrintPosition = 0
       object ppShape1: TppShape
-        DesignLayer = ppDesignLayer1
+        DesignLayer = ppDesignLayer2
         UserName = 'Shape1'
         Brush.Color = clSilver
         Pen.Color = clSilver
@@ -276,10 +275,10 @@ inherited FCliente: TFCliente
         mmTop = 0
         mmWidth = 203200
         BandType = 1
-        LayerName = Foreground
+        LayerName = Foreground1
       end
       object ppLabel1: TppLabel
-        DesignLayer = ppDesignLayer1
+        DesignLayer = ppDesignLayer2
         UserName = 'Label1'
         RTLReading = False
         AutoSize = False
@@ -298,17 +297,17 @@ inherited FCliente: TFCliente
         mmTop = 1323
         mmWidth = 92340
         BandType = 1
-        LayerName = Foreground
+        LayerName = Foreground1
       end
     end
-    object ppHeaderBand1: TppHeaderBand
+    object ppHeaderBand1: TppHeaderBand [1]
       Background.Brush.Style = bsClear
       Border.mmPadding = 0
       mmBottomOffset = 0
       mmHeight = 0
       mmPrintPosition = 0
     end
-    object ppDetailBand1: TppDetailBand
+    object ppDetailBand1: TppDetailBand [2]
       Background1.Brush.Style = bsClear
       Background2.Brush.Style = bsClear
       Border.mmPadding = 0
@@ -316,7 +315,7 @@ inherited FCliente: TFCliente
       mmHeight = 4763
       mmPrintPosition = 0
       object ppDBText1: TppDBText
-        DesignLayer = ppDesignLayer1
+        DesignLayer = ppDesignLayer2
         UserName = 'DBText1'
         RTLReading = False
         Border.mmPadding = 0
@@ -334,10 +333,10 @@ inherited FCliente: TFCliente
         mmTop = -266
         mmWidth = 125148
         BandType = 4
-        LayerName = Foreground
+        LayerName = Foreground1
       end
       object ppDBText2: TppDBText
-        DesignLayer = ppDesignLayer1
+        DesignLayer = ppDesignLayer2
         UserName = 'DBText2'
         RTLReading = False
         Border.mmPadding = 0
@@ -355,10 +354,10 @@ inherited FCliente: TFCliente
         mmTop = -266
         mmWidth = 17727
         BandType = 4
-        LayerName = Foreground
+        LayerName = Foreground1
       end
       object ppDBText3: TppDBText
-        DesignLayer = ppDesignLayer1
+        DesignLayer = ppDesignLayer2
         UserName = 'DBText3'
         RTLReading = False
         Border.mmPadding = 0
@@ -376,17 +375,17 @@ inherited FCliente: TFCliente
         mmTop = -266
         mmWidth = 46302
         BandType = 4
-        LayerName = Foreground
+        LayerName = Foreground1
       end
     end
-    object ppFooterBand1: TppFooterBand
+    object ppFooterBand1: TppFooterBand [3]
       Background.Brush.Style = bsClear
       Border.mmPadding = 0
       mmBottomOffset = 0
       mmHeight = 6615
       mmPrintPosition = 0
       object ppShape2: TppShape
-        DesignLayer = ppDesignLayer1
+        DesignLayer = ppDesignLayer2
         UserName = 'Shape2'
         Brush.Color = clSilver
         Pen.Color = clSilver
@@ -395,10 +394,10 @@ inherited FCliente: TFCliente
         mmTop = 0
         mmWidth = 203200
         BandType = 8
-        LayerName = Foreground
+        LayerName = Foreground1
       end
       object ppLine5: TppLine
-        DesignLayer = ppDesignLayer1
+        DesignLayer = ppDesignLayer2
         UserName = 'Line5'
         Border.mmPadding = 0
         Pen.Color = clGray
@@ -409,10 +408,10 @@ inherited FCliente: TFCliente
         mmTop = 5292
         mmWidth = 200555
         BandType = 8
-        LayerName = Foreground
+        LayerName = Foreground1
       end
       object ppSystemVariable1: TppSystemVariable
-        DesignLayer = ppDesignLayer1
+        DesignLayer = ppDesignLayer2
         UserName = 'SystemVariable1'
         RTLReading = False
         Border.mmPadding = 0
@@ -428,10 +427,10 @@ inherited FCliente: TFCliente
         mmTop = 1323
         mmWidth = 29898
         BandType = 8
-        LayerName = Foreground
+        LayerName = Foreground1
       end
       object ppSystemVariable2: TppSystemVariable
-        DesignLayer = ppDesignLayer1
+        DesignLayer = ppDesignLayer2
         UserName = 'SystemVariable2'
         RTLReading = False
         Border.mmPadding = 0
@@ -448,10 +447,10 @@ inherited FCliente: TFCliente
         mmTop = 1323
         mmWidth = 10319
         BandType = 8
-        LayerName = Foreground
+        LayerName = Foreground1
       end
     end
-    object ppGroup1: TppGroup
+    object ppGroup1: TppGroup [4]
       BreakName = 'Cidade'
       DataPipeline = ppDbDadosRel
       GroupFileSettings.NewFile = False
@@ -470,7 +469,7 @@ inherited FCliente: TFCliente
         mmHeight = 9790
         mmPrintPosition = 0
         object ppLine4: TppLine
-          DesignLayer = ppDesignLayer1
+          DesignLayer = ppDesignLayer2
           UserName = 'Line4'
           Border.mmPadding = 0
           Pen.Color = clGray
@@ -482,10 +481,10 @@ inherited FCliente: TFCliente
           mmWidth = 194998
           BandType = 3
           GroupNo = 0
-          LayerName = Foreground
+          LayerName = Foreground1
         end
         object ppLine3: TppLine
-          DesignLayer = ppDesignLayer1
+          DesignLayer = ppDesignLayer2
           UserName = 'Line3'
           Border.mmPadding = 0
           Pen.Color = clGray
@@ -497,10 +496,10 @@ inherited FCliente: TFCliente
           mmWidth = 200555
           BandType = 3
           GroupNo = 0
-          LayerName = Foreground
+          LayerName = Foreground1
         end
         object ppLabel2: TppLabel
-          DesignLayer = ppDesignLayer1
+          DesignLayer = ppDesignLayer2
           UserName = 'Label2'
           RTLReading = False
           AutoSize = False
@@ -520,10 +519,10 @@ inherited FCliente: TFCliente
           mmWidth = 125148
           BandType = 3
           GroupNo = 0
-          LayerName = Foreground
+          LayerName = Foreground1
         end
         object ppLabel3: TppLabel
-          DesignLayer = ppDesignLayer1
+          DesignLayer = ppDesignLayer2
           UserName = 'Label3'
           RTLReading = False
           AutoSize = False
@@ -543,10 +542,10 @@ inherited FCliente: TFCliente
           mmWidth = 17727
           BandType = 3
           GroupNo = 0
-          LayerName = Foreground
+          LayerName = Foreground1
         end
         object ppLabel4: TppLabel
-          DesignLayer = ppDesignLayer1
+          DesignLayer = ppDesignLayer2
           UserName = 'Label4'
           RTLReading = False
           AutoSize = False
@@ -566,10 +565,10 @@ inherited FCliente: TFCliente
           mmWidth = 46302
           BandType = 3
           GroupNo = 0
-          LayerName = Foreground
+          LayerName = Foreground1
         end
         object ppDBText4: TppDBText
-          DesignLayer = ppDesignLayer1
+          DesignLayer = ppDesignLayer2
           UserName = 'DBText4'
           RTLReading = False
           Border.mmPadding = 0
@@ -588,7 +587,7 @@ inherited FCliente: TFCliente
           mmWidth = 149225
           BandType = 3
           GroupNo = 0
-          LayerName = Foreground
+          LayerName = Foreground1
         end
       end
       object ppGroupFooterBand1: TppGroupFooterBand
@@ -599,15 +598,6 @@ inherited FCliente: TFCliente
         mmHeight = 0
         mmPrintPosition = 0
       end
-    end
-    object ppDesignLayers1: TppDesignLayers
-      object ppDesignLayer1: TppDesignLayer
-        UserName = 'Foreground'
-        LayerType = ltBanded
-        Index = 0
-      end
-    end
-    object ppParameterList1: TppParameterList
     end
   end
   inherited ppDbDadosRel: TppDBPipeline

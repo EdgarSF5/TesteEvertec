@@ -214,8 +214,8 @@ begin
       if IsEmpty then
       begin
         msg('O CEP informado não pertence a cidade escolhida!');
-        if edBairro.CanFocus then
-          edBairro.SetFocus;
+        if edCEP.CanFocus then
+          edCEP.SetFocus;
         exit;
       end;
 
